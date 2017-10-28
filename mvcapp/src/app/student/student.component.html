@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title" >User Entry</h3>
+        </div>
+        <div class="panel-body">
+          <form #f="ngForm" (ngSubmit)="onFormSubmit(f)">
+            <div class="form-group">
+              <label for="fname"></label>
+              <input type="text" id="fname" ngModel  #fname="ngModel" (change)="log(fname)" name="fname" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <label for="lname"></label>
+                <input id="lname" ngModel type="text" name="lname" #lname="ngModel" (change)="log(lname)"  class="form-control">
+              </div>
+              <button class="btn primary">Save</button>
+          </form>
+        </div>
+      </div>
+
+</div>
